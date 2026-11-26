@@ -1,6 +1,6 @@
 /* HANO service worker - offline app shell.
    API calls are deliberately NOT cached: reports must stay current. */
-const CACHE = 'hano-shell-v3-clean';
+const CACHE = 'hano-shell-v4-authfix';
 const SHELL = [
   './',
   './index.html',

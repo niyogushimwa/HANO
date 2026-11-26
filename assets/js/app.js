@@ -661,19 +661,27 @@ async function submitAuth() {
     phone: form.querySelector('#authPhone').value.trim(),
     password: form.querySelector('#authPassword').value,
   };
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(params.email || '');
   const valid = isLogin
     ? Boolean(params.identifier && params.password)
-    : Boolean(params.name && params.identifier && params.password);
-  if (!valid) { toast(t('fillFields'), true); return; }
+    : Boolean(params.name && emailOk && params.password && params.password.length >= 8);
+  if (!valid) {
+    toast(isLogin ? t('fillFields') : (emailOk ? t('passwordShort') : t('emailInvalid')), true);
+    return;
+  }
   const btn = document.querySelector('[data-act="submit-auth"]');
+  const originalText = btn ? btn.textContent : '';
   if (btn) { btn.disabled = true; btn.textContent = t('sending'); }
   try {
     const data = await api('auth', isLogin ? 'login' : 'register', params);
     state.user = data.user;
     persistUser();
-    toast(isLogin ? t('welcomeBack') : t('saved'));
+    toast(isLogin ? t('welcomeBack') : t('accountCreated'));
     await go('home');
-  } catch (e) { toast(e.message, true); }
+  } catch (e) {
+    toast(e.message, true);
+    if (btn) { btn.disabled = false; btn.textContent = originalText; }
+  }
 }
 
 async function submitReport() {
