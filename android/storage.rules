@@ -1,0 +1,13 @@
+rules_version = '2';
+// HANO example Cloud Storage rules — SCAFFOLD. Review before production.
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /reports/{reportId}/{fileName} {
+      allow read: if true; // report photos are part of the public community feed
+      allow create: if request.auth != null
+                    && request.resource.size < 5 * 1024 * 1024
+                    && request.resource.contentType.matches('image/(jpeg|png|webp)');
+      allow update, delete: if false; // only server-side admin SDK should remove photos
+    }
+  }
+}

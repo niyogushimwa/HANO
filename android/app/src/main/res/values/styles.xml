@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="HanoTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">#FFFAF6F6</item>
+        <item name="android:statusBarColor">#FFDB2227</item>
+    </style>
+</resources>

@@ -1,0 +1,20 @@
+{
+  "name": "HANO — Your Community, Your Voice, Your Solutions",
+  "short_name": "HANO",
+  "description": "Report and track community problems in Rwanda.",
+  "id": "/HANO/",
+  "start_url": "/HANO/index.html",
+  "scope": "/HANO/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF6F6",
+  "theme_color": "#DB2227",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["social", "government", "productivity"],
+  "icons": [
+    { "src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

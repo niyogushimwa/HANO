@@ -1,0 +1,11 @@
+# Only image files may be served from this folder. Nothing here is executable.
+Options -Indexes
+php_flag engine off
+<FilesMatch "\.(php|phtml|php3|php4|php5|pht|phar|cgi|pl|py|sh|js|html|htm)$">
+    Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !\.(jpg|jpeg|png|webp)$ [NC]
+    RewriteRule .* - [F,L]
+</IfModule>

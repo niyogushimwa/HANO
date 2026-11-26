@@ -1,0 +1,75 @@
+REMY NIYOGUSHIMWA - SHORT ANIMATED AD (HANO / Citizen Voice)
+Video: remy_hano_ad_9x16.mp4  |  1080x1920 (9:16)  |  40 s  |  H.264 MP4  |  ~2 MB
+
+----------------------------------------------------------------------
+STORYBOARD / ON-SCREEN SCRIPT
+----------------------------------------------------------------------
+0:00-0:04  INTRO
+  "MURAPHO / HELLO"
+  "REMY NIYOGUSHIMWA"
+  "Software development student - Web & digital designer - Huye, Rwanda"
+  "Muraho! Ndi Remy."
+
+0:04-0:09  SKILLS
+  "WHAT I DO - tools I use and skills I'm growing"
+  Web & code: HTML, CSS, JavaScript, Git
+  Programming: Python, C++
+  Digital design: Photoshop, Illustrator, InDesign
+  Language tools: OmegaT, SYSTRAN
+  Practice: small websites, AI exploration
+
+0:09-0:15  FEATURED PROJECT - SKILLNEST
+  "Student skills, real business" - IN DEVELOPMENT
+  PHP / MySQL / JavaScript / Marketplace
+  github.com/niyogushimwa/SkillNest
+
+0:15-0:20  MORE WORK
+  Personal portfolio - live: remyportfolio.vercel.app
+  Job-finding platform - PHP / MySQL
+  NISR data story - animated statistics: every life counts
+
+0:20-0:29  HANO (upcoming mobile app)
+  "COMING SOON / MOBILE APP - HANO"
+  "Citizen Voice - Ijwi ryawe ni ngombwa"
+  Phone mock with reports: damaged road, no clean water,
+  unsafe crossing, school needs help
+  "REPORT - TRACK - SOLVE"
+  "An idea in progress - built to listen first."
+
+0:29-0:34  MISSION
+  "EVERY VOICE COUNTS. / Ijwi ryawe ni ngombwa."
+  Share a problem in your community
+  Follow it as it gets solved
+  Help build a better Rwanda
+
+0:34-0:40  CONTACT
+  Photo, name, "Let's build something useful."
+  niyogushimwaremy@gmail.com
+  linkedin.com/in/remy-niyogushimwa-7033a5377
+  github.com/niyogushimwa
+  WhatsApp +250 793 138 244
+  "Murakoze!"
+
+----------------------------------------------------------------------
+POST CAPTION (LinkedIn / TikTok / Instagram / WhatsApp)
+----------------------------------------------------------------------
+I'm Remy Niyogushimwa - a BIT student, web developer and digital designer
+in Huye, Rwanda. I learn by building: SkillNest, my portfolio, a job-finding
+platform and an NISR data story.
+
+Next: HANO - a citizen voice app where people can report the problems they
+face in their communities, follow them, and help make life better.
+Ijwi ryawe ni ngombwa. Your voice matters.
+
+Open to internships, junior web roles, design projects and collaboration.
+Let's build something useful.
+
+#RemyNiyogushimwa #HANO #CitizenVoice #SoftwareDevelopment #WebDesign
+#Rwanda #Huye #BIT #StudentDeveloper #Design #Innovation #IjwiRyaweNiNgombwa
+
+----------------------------------------------------------------------
+FILES
+----------------------------------------------------------------------
+make_ad_video.py          - regenerates the MP4 (Python + Pillow + OpenCV)
+remy_hano_ad_9x16.mp4     - final video
+video_script_and_captions.txt - this file

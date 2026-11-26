@@ -1,0 +1,62 @@
+rules_version = '2';
+// HANO example Firestore rules — SCAFFOLD. Review and test before production.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function me() { return request.auth.uid; }
+    function myRole() {
+      return signedIn() ? get(/databases/$(database)/documents/users/$(me())).data.role : 'none';
+    }
+    function isAdmin() { return myRole() == 'admin'; }
+    function isOfficer() { return myRole() == 'officer'; }
+    function isOwner(ownerId) { return signedIn() && me() == ownerId; }
+
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin() || isOfficer();
+      allow create: if isOwner(userId)
+                    && request.resource.data.role == 'citizen'
+                    && request.resource.data.keys().hasAll(['name', 'email', 'role', 'createdAt']);
+      // Citizens may edit their own contact details; only admins may change roles.
+      allow update: if (isOwner(userId) && request.resource.data.role == resource.data.role
+                        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role']))
+                    || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // The community feed is public.
+    match /reports/{reportId} {
+      allow read: if true;
+      allow create: if signedIn()
+                    && request.resource.data.userId == me()
+                    && request.resource.data.status == 'submitted'
+                    && request.resource.data.title is string
+                    && request.resource.data.title.size() >= 5
+                    && request.resource.data.description is string
+                    && request.resource.data.description.size() >= 10;
+      allow update: if isAdmin() || isOfficer()
+                    || (isOwner(resource.data.userId)
+                        && resource.data.status == 'resolved'
+                        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['resolvedConfirmed']));
+      allow delete: if isAdmin();
+    }
+
+    match /reportUpdates/{updateId} {
+      allow read: if true;
+      allow create: if signedIn() && request.resource.data.actorId == me();
+      allow update, delete: if isAdmin();
+    }
+
+    match /notifications/{notificationId} {
+      allow read: if isOwner(resource.data.userId) || isAdmin();
+      allow create: if signedIn() && request.resource.data.userId == me();
+      allow update: if isOwner(resource.data.userId) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    match /departments/{departmentId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}

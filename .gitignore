@@ -1,0 +1,18 @@
+# Android / Gradle generated files
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+*.iml
+*.apk
+*.aab
+
+# Firebase real credentials (only the .example placeholder is committed)
+android/app/google-services.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
