@@ -2,8 +2,9 @@
 
 A community problem-reporting and public-service monitoring platform built for Rwanda.
 
-**Branding:** the HANO logo is the red location-pin uploaded at `Image/hano logo.jpg`.
-The app palette was retuned to match it: `#DB2227` primary, `#A51B20` dark, `#FDECEC` soft, with charcoal `#2A3439` as the secondary accent.
+**Repository:** <https://github.com/niyogushimwa/HANO>
+
+**Branding:** the HANO mark was redesigned from the uploaded red pin (`Image/hano logo.jpg`) into a clean geometric location pin with a white **H**. The app palette was retuned to match: `#DB2227` primary, `#A51B20` dark, `#FDECEC` soft, with charcoal `#2A3439` as the secondary accent. Source assets are `assets/img/logo.svg` and `assets/img/logo.png`; the PWA and Android adaptive icons are generated from the same mark.
 
 This repository contains:
 
