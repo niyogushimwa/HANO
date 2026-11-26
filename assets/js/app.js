@@ -237,7 +237,7 @@ function renderTopbar() {
   topbar.innerHTML = `
     <button class="brand" data-act="nav" data-view="home" aria-label="HANO home">
       <img src="assets/img/logo.png" alt="HANO logo" onerror="this.style.display='none'">
-      <span><strong>HANO</strong><small>${esc(t('tagline'))}</small></span>
+      <span><strong>HANO</strong></span>
     </button>
     <span class="spacer"></span>
     <span class="mode-badge ${state.mode === 'demo' ? 'demo' : ''}">${esc(state.mode === 'demo' ? t('demo') : t('live'))}</span>
@@ -313,7 +313,7 @@ async function viewHome() {
   }
   return `
     <div class="hero">
-      <span class="eyebrow">${esc(t('tagline'))}</span>
+      <span class="eyebrow">HANO · ${esc(state.mode === 'demo' ? t('demo') : t('live'))}</span>
       <h1>${esc(t('hello'))}! 👋</h1>
       <p>${esc(t('noReportsHint'))}</p>
       <div class="row" style="margin-top:16px">
@@ -447,7 +447,6 @@ async function viewProfile() {
       <div class="auth">
         <img class="auth-logo" src="assets/img/logo.png" alt="HANO logo" onerror="this.style.display='none'">
         <h1>HANO</h1>
-        <p class="tagline">${esc(t('tagline'))}</p>
         <div class="card">
           <div class="tabs">
             <button class="${login ? 'active' : ''}" data-act="auth-tab" data-tab="login">${esc(t('signIn'))}</button>

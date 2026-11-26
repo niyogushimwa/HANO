@@ -3,7 +3,6 @@ export const LANGS = { en: 'English', rw: 'Kinyarwanda' };
 
 const DICT = {
   en: {
-    tagline: 'Your Community, Your Voice, Your Solutions',
     demo: 'DEMO MODE',
     live: 'CONNECTED',
     home: 'Home', explore: 'Explore', report: 'Report', notifications: 'Notifications', profile: 'Profile',
@@ -44,7 +43,6 @@ const DICT = {
     roleUpdated: 'Role updated', onlyAdmin: 'Administrators only',
   },
   rw: {
-    tagline: 'Ijwi ryawe ni ngombwa',
     demo: 'IGERAGEZWA',
     live: 'YAHUZWE',
     home: 'Ahabanza', explore: 'Reba', report: 'Tangaza', notifications: 'Imenyesha', profile: 'Umwirondoro',

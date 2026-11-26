@@ -23,10 +23,9 @@ svg{width:16px;height:16px;vertical-align:-3px;flex:none}
 /* Header */
 .topbar{flex:none;padding:calc(12px + env(safe-area-inset-top)) 18px 12px;background:var(--white);
   border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;min-height:66px}
-.brand{display:flex;align-items:center;gap:9px;min-width:0}
+.brand{display:flex;align-items:center;gap:9px;min-width:0;background:none;border:0;padding:0;color:inherit;text-align:left}
 .brand img{width:36px;height:36px;border-radius:11px;flex:none}
 .brand strong{font-size:19px;letter-spacing:.04em;color:var(--brand-dark)}
-.brand small{display:block;font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .topbar .spacer{flex:1}
 .icon-btn{width:38px;height:38px;border:1px solid var(--line);border-radius:12px;background:var(--white);
   display:grid;place-items:center;color:var(--brand-dark);flex:none}
@@ -140,8 +139,7 @@ textarea{min-height:96px;resize:vertical}
 
 /* Auth */
 .auth-logo{width:74px;height:74px;border-radius:22px;margin:10px auto 12px;display:block;box-shadow:0 12px 24px rgba(165,27,32,.22)}
-.auth h1{text-align:center;font-size:26px}
-.auth .tagline{text-align:center;color:var(--muted);font-size:13px;margin:4px 0 20px}
+.auth h1{text-align:center;font-size:26px;margin-bottom:20px}
 .tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--brand-soft);border-radius:13px;padding:4px;margin-bottom:16px}
 .tabs button{border:0;background:none;padding:9px;border-radius:10px;font-weight:700;color:var(--muted);font-size:13px}
 .tabs button.active{background:#fff;color:var(--brand-dark);box-shadow:var(--shadow)}

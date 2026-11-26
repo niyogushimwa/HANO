@@ -1,4 +1,4 @@
-# HANO — Your Community, Your Voice, Your Solutions
+# HANO — Community Problem Reporting
 
 A community problem-reporting and public-service monitoring platform built for Rwanda.
 

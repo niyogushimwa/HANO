@@ -1,4 +1,4 @@
--- HANO - Your Community, Your Voice, Your Solutions
+-- HANO - Community Problem Reporting
 -- Database schema + demonstration data (XAMPP / MySQL 8+)
 -- Import in phpMyAdmin, then set credentials in api/config.php
 
